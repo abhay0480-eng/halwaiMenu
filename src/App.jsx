@@ -7,10 +7,13 @@ import axios from 'axios';
 function App() {
 
   const [menu,setMenu] = useState()
+  const API_BASE_URL = import.meta.env.PROD 
+    ? 'https://chai-or-backend-fullstack.onrender.com' 
+    : '';
   useEffect(() => {
     (async () => {
       try {
-        const halwaiMenuReq = await axios.get("/apiv1/partyMenu");
+        const halwaiMenuReq = await axios.get(`${API_BASE_URL}/apiv1/partyMenu`);
         console.log("halwaiMenuReq", halwaiMenuReq);
         setMenu(halwaiMenuReq?.data?.SOUPS)
       } catch (error) {
