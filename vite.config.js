@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   server:{
     proxy:{
-      '/api': "https://chai-or-backend-fullstack.onrender.com"
+      '/apiv1': "https://chai-or-backend-fullstack.onrender.com"
     }
   },
   plugins: [react()],

@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     (async () => {
       try {
-        const halwaiMenuReq = await axios.get("/api/partyMenu");
+        const halwaiMenuReq = await axios.get("/apiv1/partyMenu");
         console.log("halwaiMenuReq", halwaiMenuReq);
         setMenu(halwaiMenuReq?.data?.SOUPS)
       } catch (error) {
