@@ -67,8 +67,26 @@ const App = () => {
             className="bg-white p-6 rounded shadow hover:shadow-lg transform transition-transform duration-300"
             whileHover={{ translateY: -10, scale: 1.05 }}
           >
-            <img src="/cholebature.jpg" alt="Dish" className="w-full h-40 object-cover rounded mb-4" />
-            <h3 className="text-xl font-semibold">Royal Feast</h3>
+            <img src="/cholebature.jpg" alt="Dish" className="w-full h-96  object-cover rounded mb-4" />
+            <h3 className="text-xl font-semibold">Package 1</h3>
+            <p className="text-gray-600">A delightful assortment of traditional dishes.</p>
+          </motion.div>
+
+          <motion.div
+            className="bg-white p-6 rounded shadow hover:shadow-lg transform transition-transform duration-300"
+            whileHover={{ translateY: -10, scale: 1.05 }}
+          >
+            <img src="/thali.jpg" alt="Dish" className="w-full h-96 object-cover rounded mb-4" />
+            <h3 className="text-xl font-semibold">Package 2</h3>
+            <p className="text-gray-600">A delightful assortment of traditional dishes.</p>
+          </motion.div>
+
+          <motion.div
+            className="bg-white p-6 rounded shadow hover:shadow-lg transform transition-transform duration-300"
+            whileHover={{ translateY: -10, scale: 1.05 }}
+          >
+            <img src="/feast.jpg" alt="Dish" className="w-full h-96 object-cover rounded mb-4" />
+            <h3 className="text-xl font-semibold">Package 3</h3>
             <p className="text-gray-600">A delightful assortment of traditional dishes.</p>
           </motion.div>
           {/* Repeat for more cards */}
