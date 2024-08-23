@@ -2,36 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link as ScrollLink } from 'react-scroll';
 import { Parallax } from 'react-parallax';
+import Header from './Component/Header';
+import { Link } from 'react-router-dom';
 
 const App = () => {
   return (
     <div className="font-sans">
       {/* Header */}
-      <header className="bg-white shadow-md p-4 flex justify-between items-center fixed w-full z-50">
-        <div className="text-2xl font-bold text-gray-800">Banquet Hall</div>
-        <nav>
-          <ul className="flex space-x-4">
-            <li>
-              <ScrollLink to="home" smooth={true} duration={500} className="hover:text-blue-600 cursor-pointer">
-                Home
-              </ScrollLink>
-            </li>
-            <li>
-              <ScrollLink to="menu" smooth={true} duration={500} className="hover:text-blue-600 cursor-pointer">
-                Menu Selection
-              </ScrollLink>
-            </li>
-            <li>
-              <ScrollLink to="contact" smooth={true} duration={500} className="hover:text-blue-600 cursor-pointer">
-                Contact Us
-              </ScrollLink>
-            </li>
-            <li>
-              <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Login</button>
-            </li>
-          </ul>
-        </nav>
-      </header>
+     
+      <Header/>
+
+
 
       {/* Hero Section with Parallax Effect */}
       <Parallax
@@ -67,27 +48,35 @@ const App = () => {
             className="bg-white p-6 rounded shadow hover:shadow-lg transform transition-transform duration-300"
             whileHover={{ translateY: -10, scale: 1.05 }}
           >
+            <Link to="/package">
             <img src="/cholebature.jpg" alt="Dish" className="w-full h-96  object-cover rounded mb-4" />
             <h3 className="text-xl font-semibold">Package 1</h3>
             <p className="text-gray-600">A delightful assortment of traditional dishes.</p>
+            </Link>
+         
           </motion.div>
 
           <motion.div
             className="bg-white p-6 rounded shadow hover:shadow-lg transform transition-transform duration-300"
             whileHover={{ translateY: -10, scale: 1.05 }}
           >
+             <Link to="/package">
             <img src="/thali.jpg" alt="Dish" className="w-full h-96 object-cover rounded mb-4" />
             <h3 className="text-xl font-semibold">Package 2</h3>
             <p className="text-gray-600">A delightful assortment of traditional dishes.</p>
+             </Link>
           </motion.div>
 
           <motion.div
             className="bg-white p-6 rounded shadow hover:shadow-lg transform transition-transform duration-300"
             whileHover={{ translateY: -10, scale: 1.05 }}
           >
+             <Link to="/package">
             <img src="/feast.jpg" alt="Dish" className="w-full h-96 object-cover rounded mb-4" />
             <h3 className="text-xl font-semibold">Package 3</h3>
             <p className="text-gray-600">A delightful assortment of traditional dishes.</p>
+             </Link>
+
           </motion.div>
           {/* Repeat for more cards */}
         </div>
