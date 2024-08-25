@@ -4,12 +4,33 @@ import { Link as ScrollLink } from 'react-scroll';
 import { Parallax } from 'react-parallax';
 import Header from './Component/Header';
 import { Link } from 'react-router-dom';
+import Footer from './Component/Footer';
+import { useDispatch, useSelector } from 'react-redux';
+import { decrement, increment } from './store/packageSlice';
 
 const App = () => {
+  const count = useSelector((state) => state.package.value)
+  const dispatch = useDispatch()
   return (
     <div className="font-sans">
 
-
+<div>
+      <div>
+        <button
+          aria-label="Increment value"
+          onClick={() => dispatch(increment())}
+        >
+          Increment
+        </button>
+        <span>{count}</span>
+        <button
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+        >
+          Decrement
+        </button>
+      </div>
+    </div>
 
       {/* Hero Section with Parallax Effect */}
       <Parallax
@@ -73,7 +94,6 @@ const App = () => {
             <h3 className="text-xl font-semibold">Package 3</h3>
             <p className="text-gray-600">A delightful assortment of traditional dishes.</p>
              </Link>
-
           </motion.div>
           {/* Repeat for more cards */}
         </div>
@@ -94,12 +114,6 @@ const App = () => {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="bg-gray-800 text-white py-6">
-        <div className="container mx-auto text-center">
-          <p>&copy; 2024 Banquet Hall. All rights reserved.</p>
-          <p>Contact us: 123-456-7890 | info@banquethall.com</p>
-        </div>
-      </footer>
     </div>
   );
 };
